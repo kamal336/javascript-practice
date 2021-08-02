@@ -1,4 +1,4 @@
-// forward while
+// forward while loof
 var i = 0;
 
 while(i <=10){
@@ -15,7 +15,7 @@ while(mylovingYrs < 6){
 }
 console.log('The End');
 
-// backward while
+// backward while loof
 var x = 10;
 
 while(x > 0){
