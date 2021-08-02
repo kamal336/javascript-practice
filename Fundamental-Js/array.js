@@ -18,6 +18,14 @@ console.log(ages[3]);
 console.log(ages[4]);
 
 
+// Array
 
+var friends = ['naim','koli','saiful','tyab']
+
+console.log(friends);
+
+// toString method
+friends.toString();
+console.log(friends)
 
 
