@@ -1,4 +1,4 @@
-// every loof have three part such as initial or starting part, ending part, update part.
+// every loof have three part such as initial or starting part, condition or ending part, update part.
 
 // forward while loof
 var i = 0; //initial or starting part

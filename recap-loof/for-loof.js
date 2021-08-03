@@ -1,6 +1,7 @@
-// every loof have three part such as initial or starting part, ending part, update part.
+// every loof have three part such as initial or starting part,condition or ending part, update part.
 
 // forward for loof
+
 for(var i = 0; i <= 10; i++){
     console.log(i);
 
@@ -35,3 +36,4 @@ console.log('The even number end')
 for(var oddNumber = 1; oddNumber < 50; oddNumber += 2){
     console.log('The even number is '+ oddNumber + ' from 1 - 50');
 }
+
