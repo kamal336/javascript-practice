@@ -24,7 +24,7 @@
 //     console.log('Color not match.');
 // }
 
-// switch starts from here
+// switch 
 
 var myWife = 'naim';
 
@@ -40,4 +40,20 @@ switch(myWife){
         break;
     default:
         console.log('She is my wife.');
+}
+
+
+// To declaring a function
+function myWife(){
+    console.log('Jannatul Naim is my wife.'); // statement
+}
+// Calling function
+myWife();
+
+
+// To declare a Object
+var student1 = {
+    name : 'Akter Kamal',
+    id : 101,
+    cgpa : 4.49
 }
