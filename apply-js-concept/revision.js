@@ -131,3 +131,18 @@ const studentGrade = (number) =>{
 
 console.log(studentGrade(75));
 
+// interest calculation
+// interest formula 
+// p = Principal amount
+// T = Time
+// R = Rate(How much percent)
+// Main Formula ==> SI = (P*T*R)/100;
+
+const interestCal = (P,T,R) =>{
+   let SI = (P*T*R)/100;  
+   return SI;
+}
+
+let getInterest = interestCal(100000,12,2);
+console.log('Total interest after one year is',getInterest, 'tk');
+
