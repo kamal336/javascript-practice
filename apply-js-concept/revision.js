@@ -133,6 +133,8 @@ console.log(studentGrade(75));
 
 // interest calculation
 // interest formula 
+
+
 // p = Principal amount
 // T = Time
 // R = Rate(How much percent)
@@ -142,7 +144,19 @@ const interestCal = (P,T,R) =>{
    let SI = (P*T*R)/100;  
    return SI;
 }
-
 let getInterest = interestCal(100000,12,2);
 console.log('Total interest after one year is',getInterest, 'tk');
 
+// To convert celsius to fahrenheit
+const celToFahrenheit = (celsius) => {
+     let fahrenheit = celsius * 9/5 + 32;
+     return fahrenheit;
+}
+console.log(celToFahrenheit(37));
+
+// To convert fahrenheit to celsius
+const farnToCelsius = (fahrenheit) => {
+    let celsius = (fahrenheit - 32) * 5/9;
+    return celsius;
+}
+console.log(farnToCelsius(98));
