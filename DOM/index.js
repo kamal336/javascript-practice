@@ -40,4 +40,28 @@ for(const para of blogPara){
     para.style.fontSize = '1.2rem';
 }
 
+// create Element
+let p = document.createElement('p');
+
+p.innerText = 'This is my first create html element by using javascript';
+
+let topHeading = document.getElementById('top-heading');
+topHeading.appendChild(p);
+
+let p2 = document.createElement('p');
+
+p2.innerText = 'My awesome paragraph 2';
+
+topHeading.appendChild(p2)
+let p3 = document.createElement('p');
+
+p3.innerText = 'My awesome paragraph 3';
+
+topHeading.appendChild(p3)
+let h3 = document.createElement('h3');
+
+h3.innerText = 'My awesome heading 3';
+
+topHeading.appendChild(h3)
+
 
