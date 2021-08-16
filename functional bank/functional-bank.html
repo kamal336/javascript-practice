@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Banking Page</title>
+    <!-- tailwind -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="text-5xl text-center font-bold my-8 ">My Dream <span class="text-yellow-400">Account Information</span></h1>
+    </header>
+
+    <main>
+        <!-- mybanking details  -->
+        <section class="w-3/4 mx-auto">
+            <div class="grid grid-cols-3 gap-4 my-6">
+                <div class="bg-blue-500 rounded-xl font-semibold text-center text-yellow-300 p-4">
+                    <h3 class="text-3xl">Total Balance</h3>
+                    <h3 class="text-5xl">$<span id="balance-total">1400</span></h3>
+                </div>
+                <div class="bg-yellow-600 rounded-xl font-semibold text-center text-yellow-300 p-4">
+                    <h3 class="text-3xl">Deposite</h3>
+                    <h3 class="text-5xl">$<span id="deposite-total">00</span></h3>
+                </div>
+                <div class="bg-green-500 rounded-xl font-semibold text-center text-yellow-300 p-4">
+                    <h3 class="text-3xl">Widthdraw</h3>
+                    <h3 class="text-5xl">$<span id="widthdraw-total">00</span></h3>
+                </div>
+            </div>
+
+            <!-- deposte input and widthdraw calculate -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-blue-300 text-center p-6 rounded-2xl">
+                    <h3 class="text-3xl font-semibold ">Please Deposite</h3>
+                    <div class="p-4">
+                        <input class="w-3/4 block mx-auto border rounded p-2 my-4 outline-none" type="email" name="" id="deposite-input" placeholder="Enter Your Deposite Amount">
+                        <button id="deposite-btn" class="bg-blue-700 px-6 py-2 text-white font-semibold rounded">Deposite</button>
+                    </div>
+                </div>
+                <div class="bg-yellow-500 text-center p-6 rounded-2xl">
+                    <h3 class="text-3xl font-semibold ">Please Widthdraw</h3>
+                    <div class="p-4">
+                        <input class="w-3/4 block mx-auto border rounded p-2 my-4 outline-none" type="email" name="" id="widthdraw-input" placeholder="Enter Your Widthdraw Amount">
+                        <button id="widthdraw-btn" class="bg-blue-700 px-6 py-2 text-white font-semibold rounded">Widthdraw</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="functonal-mybank.js"></script>
+    <!-- <script src="functional-bank.js"></script> -->
+</body>
+</html>
+
