@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <section id="myComment">
+    <section id="my-comment">
         <h1>My Comment By Using Javascript</h1>
         <p>Please Comment Here</p>
     </section>
@@ -15,13 +15,18 @@
     <textarea name="" id="input-field" cols="35" rows="3" style="resize: none; border-radius: 10px; margin-bottom: 5px; background-color: rgb(234, 243, 247);
     "></textarea>
     <br>
-    <button class="post">Post</button>
-    
-    
+    <button id="post">Post</button>
+     
    <script>
-
-
-   
+    document.getElementById('post').addEventListener('click',function(){
+    let inputField = document.getElementById('input-field');
+     const p = document.createElement('p');
+     p.innerHTML = inputField.value;
+     const myComment = document.getElementById('my-comment');
+     myComment.appendChild(p);
+    //  clear input field 
+    inputField.value = '';
+    })
    </script>
 </body>
 </html>

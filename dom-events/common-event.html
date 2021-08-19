@@ -16,8 +16,8 @@
 
     <script>
         // get button innerText
-        document.querySelector('button').addEventListener('click',function(){
-            document.getElementById('demo').innerText = this.innerText + ' is cliked';
+        document.querySelector('button').addEventListener('click',function(){ let text = this.innerHTML;
+            document.getElementById('demo').innerHTML = text + ' is cliked';
         })
 
         // get input text 

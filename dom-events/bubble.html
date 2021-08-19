@@ -7,7 +7,44 @@
     <title>Event Bubble</title>
 </head>
 <body>
-  <h1>Event Bubble Vai</h1>
-  
+  <section>
+    <h1>Event Bubble Vai</h1>
+     <div id="div-id">
+       <h2>This is list Item</h2>
+       <ul id="ul-id">
+         <li class="item">lorem2</li>
+         <li id="second-item" class="item">lorem2</li>
+         <li class="item">lorem2</li>
+         <li class="item">lorem2</li>
+       </ul>
+     </div>
+
+     <div id="div2-id">
+       <button>button</button>
+     </div>
+  </section>
+   <script>
+  //  remove item by clicking
+       const items = document.getElementsByClassName('item');
+         for(let item of items){
+          item.addEventListener('click',function(event){
+          // const parentItem = document.getElementById('ul-id');
+          // parentItem.removeChild(item);
+          event.target.parentNode.removeChild(event.target)
+          })
+         }
+
+      // another way of remove list item 
+      // document.getElementById('ul-id').addEventListener('click',function(event){
+      //      event.target.parentNode.removeChild(event.target);
+      //      console.log(event.target)
+      // })
+
+      // document.getElementById('div2-id').addEventListener('click',function(e){
+      //   e.target.parentNode.removeChild(e.target);
+      // })
+     
+    
+   </script>
 </body>
 </html>
