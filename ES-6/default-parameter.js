@@ -5,3 +5,6 @@ console.log(addNumber(15));
 const favouriteName=(first,last= 'kamal')=> `${first} ${last}`;
 
 console.log(favouriteName('akter','naim'));
+
+const defaulPara =(n = 'Please Enter a Name')=> n;
+console.log(`Default paremeter is ${defaulPara()}`)
