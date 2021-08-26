@@ -47,13 +47,5 @@ console.log(CSCR,Metro,AlFaud);
 
 
 
-const myNum = [33,2,5,66,77,85,4,3];
-console.log(myNum);
 
-const myMap = myNum.map(x => x*2);
-console.log(myMap)
-
-
-const myForEach = myMap.forEach(i =>  console.log(i));
- console.log(myForEach)
 
