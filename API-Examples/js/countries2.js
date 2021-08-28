@@ -32,6 +32,7 @@ const countryByName = name =>{
 const displayDetails = details =>{
     console.log(details)
     const detailsDiv = document.getElementById('details');
+    detailsDiv.textContent = '';
     details.forEach(detail => {
         const div = document.createElement('div');
         div.innerHTML = `

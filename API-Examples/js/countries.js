@@ -9,7 +9,7 @@ loadCountries();
 const displayCountries = countries =>{
     // console.log(countries)
     const countriesDiv = document.getElementById('countries');
-
+    
     countries.forEach(country => {
         // console.log(country.name,country.population)
         const div = document.createElement('div');
@@ -34,6 +34,7 @@ const countryDetails = name =>{
 const displayDetails = details =>{
     console.log(details)
     const countryDiv = document.getElementById('details');
+    
     details.forEach(detail => {
         const div = document.createElement('div');
         div.innerHTML = `
