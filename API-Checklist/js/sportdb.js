@@ -18,11 +18,11 @@ const displaySportTeams = teams =>{
         div.classList.add('col');
         div.innerHTML = `
         <div class="col">
-        <div onclick="loadTeam(${team.idTeam})"  class="card">
+        <div onclick="loadTeam('${team.idTeam}')"  class="card">
           <img src="${team.strTeamBadge}" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">${team.strAlternate}</h5>
-            <p class="card-text">${team.strDescriptionEN}.</p>
+            <h5 class="card-title text-info">${team.strAlternate}</h5>
+            <p class="card-text">${team.strDescriptionEN.slice(0,120)}.</p>
           </div>
         </div>
       </div>
@@ -31,11 +31,8 @@ const displaySportTeams = teams =>{
     });
 }
 
-const loadTeam = teamId =>{
-   const url = `https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=${teamId}`
-   console.log(url,teamId)
-   fetch(url)
-   .then(res => res.json())
-   .then(data => console.log(data.team))
-  
+const loadTeam = idTeam =>{
+   const url = `https://www.thesportsdb.com/api/v1/json/1/lookup_all_teams.php?id=${idTeam}`;
+   console.log(url,idTeam)
+
 }
