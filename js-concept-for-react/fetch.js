@@ -12,7 +12,7 @@ console.log(Stringified);
 const parseData = JSON.parse(Stringified);
 console.log(parseData);
 
-// map in array
+// map in array for add element
 const products = [
     {productName: 'mobile',brand: 'samsung',model: 'galaxy s10'},
     {productName: 'Laptop',brand: 'hp',model: 'core i5'},
@@ -27,6 +27,7 @@ const newProduct = {productName: 'bag',brand:'asus',model: 's33'};
 const addProducts = [...products,newProduct];
 console.log(addProducts);
 
-// filter method for filtering specefing product
+// filter method for filtering specefing product or remove 
 const filtrProduct = products.filter(product => product.brand !== 'samsung')
 console.log(filtrProduct)
+
