@@ -1,45 +1,27 @@
-// load countries 
-const loadCountries =()=>{
+const loadCountries = () =>{
     fetch('https://restcountries.eu/rest/v2/all')
     .then(res => res.json())
-    .then(data => displayCountries(data))
+    .then(data =>displayCountries(data))
 }
+
+const displayCountries = (countries) =>{
+   const countryContainer = document.getElementById('countries')
+//    console.log(name,flag,capital)
+   const countryHTML = countries.map(country => countryDetails(country));
+    countryContainer.innerHTML = countryHTML.join('');
+    console.log(countryHTML)
+
+}
+
+const countryDetails = country =>{
+    const {name,capital,flag} = country;
+    return  `
+       <div class="country">
+       <img src="${flag}">
+       <h3>Name: ${name}</h3>
+       <p>Capital: ${capital}</p>
+       </div>
+    `
+}
+
 loadCountries();
-
-const displayCountries = countries =>{
-    console.log(countries)
-    const countryDiv = document.getElementById('countries')
-    countries.forEach(country => {
-        const div = document.createElement('div');
-        div.classList.add('myCountry');
-        div.innerHTML = `
-        <h3>Name: ${country.name}</h3>
-        <p>Capital: ${country.capital}</p>
-        <button onclick="countryByName('${country.name}')">Details</button>
-        `
-        countryDiv.appendChild(div)
-    });
-}
-
-const countryByName = name =>{
-    console.log(name)
-    const url = (`https://restcountries.eu/rest/v2/name/${name}`)
-    fetch(url)
-    .then(res => res.json())
-    .then(data => displayDetails(data))
-}
-
-const displayDetails = details =>{
-    console.log(details)
-    const detailsDiv = document.getElementById('details');
-    detailsDiv.textContent = '';
-    details.forEach(detail => {
-        const div = document.createElement('div');
-        div.innerHTML = `
-        <img width="350" height="200" src = ${detail.flag} >
-        <h3>Name: ${detail.name}</h3>
-        <p>Region: ${detail.region}</p>
-        `
-        detailsDiv.appendChild(div)
-    });
-}
